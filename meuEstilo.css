@@ -1,0 +1,120 @@
+@charset "UTF-8";
+
+/*Link do Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&family=Sriracha&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
+
+/*Criando variáveis de fonte no root para usar no site*/
+:root{
+    --fonte1: Verdana, Tahoma, sans-serif; 
+    /*As famílias das fontes abaixo, são referente aos linkd do Google Fonts*/
+    --fonte2: 'Passion One', cursive;
+    --fonte3: 'Sriracha', cursive;   
+}
+
+/*Configurações gerais para resetar todas todos os elementos*/
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+/*Configurações em comum entre o html e body*/
+html, body{
+    /*Configuração para que o corpo do site tenha 100% da altura da view port*/
+    min-height: 100vh;
+    background-color: darkgray; 
+    font-family: var(--fonte1); 
+    font-size: 1em; 
+}
+
+header{
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+header > h1{
+   padding-top: 50px; 
+   /*Tecnica para deixar todas as letras maiusculas - text-transform: uppercase;*/
+
+   /*Tecnica para deixar as letras maiusculas e a primeira letra maiuscula um pouco maior*/
+   font-variant: small-caps;
+   font-family: var(--fonte1); 
+   
+   /*Configurar para que o tamanho da font do cabeçalho se adapte a largura da tela*/
+   font-size: 5vw;
+}
+
+header > p{
+    padding-bottom: 50px;
+}
+
+header a, footer a{
+    color: white;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+heaver a:hover, footer a:hover{
+    text-decoration: underline;
+}
+
+/*Fazer com que as sections tenha uma porcentagem da altura no top e na parte inferior. E uma forma de deixar o coteúdo se ajustando automáticamente com o tamanho da view port*/
+section{
+    padding-top: 10vh;
+    padding-bottom: 10vh;  
+
+    /*inserir um espaçamento duplo entre as linhas para melhor a leitura.*/
+    line-height: 2em;  
+
+    padding-left: 30px;  
+    font-family: var(--fonte3); 
+
+    /*Configurar para que o tamanho da font da section se adapte a largura da tela*/
+    font-size: 3.5vw;
+}
+
+section > p{
+    padding-bottom: 2em;
+}
+
+section.normal{
+    background-color: white;
+    color: black;      
+}
+
+/*Section de imagem com efeito paralax*/
+section.imagem{
+    background-color: rgb(53, 52, 52);
+    color: white;
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.418);
+    background-size: cover;
+    background-attachment: fixed;
+    
+}
+
+section.imagem > p{
+    /*Fazer a borda se ajustar ao tamanho do conteúdo.*/
+    display: inline-block;
+    
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.527);
+    text-shadow: 2px 2px 3px black;
+}
+
+section#img01{
+    background-image: url(midias/imagem/background001.jpg);
+    background-position: right center;    
+}
+
+section#img02{
+    background-image: url(midias/imagem/background002.jpg);    
+}
+
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
